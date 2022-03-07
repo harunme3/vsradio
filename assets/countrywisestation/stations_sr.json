@@ -1,0 +1,72 @@
+[
+  {
+    "stationuuid": "9612ead1-0601-11e8-ae97-52543be04c81",
+    "name": "Radio Apintie - Suriname",
+    "url": "http://www.apintie.sr/stream.pls",
+    "favicon": "http://www.apintie.sr/favicon.ico",
+    "tags": "",
+    "countrycode": "SR",
+    "state": "",
+    "language": "dutch",
+    "votes": 39,
+    "codec": "AAC",
+    "bitrate": 96,
+    "hls": 0
+  },
+  {
+    "stationuuid": "406a51a0-1fa0-11e8-a334-52543be04c81",
+    "name": "Neutral Radio",
+    "url": "http://listen.radionomy.com/neutralradio",
+    "favicon": "http://us.zyro.com/data/n/e/neutralradio.000webhostapp.com/gallery/thumbs/zjhl2lgef9cyrql0jfa7kzbw2vuerbrjkrnl0jp9oxde9g5shnn1i..-ts1520923159.jpg?ts=1520924541467",
+    "tags": "classic country,news talk,live,top 2000,top 100,top 40,classic hits,oldies,folk music,dance,music",
+    "countrycode": "SR",
+    "state": "",
+    "language": "english,dutch",
+    "votes": 34,
+    "codec": "MP3",
+    "bitrate": 128,
+    "hls": 0
+  },
+  {
+    "stationuuid": "cc1c48a7-0c03-11ea-a87e-52543be04c81",
+    "name": "Radio Ishara",
+    "url": "http://nickerie.webhop.net:8000/;stream.mp3",
+    "favicon": "https://scontent.fbho1-1.fna.fbcdn.net/v/t1.0-0/cp0/e15/q65/p168x128/75412086_820772598339973_8806547904614367232_n.jpg?_nc_cat=111&_nc_oc=AQkzgNEEk3ymAaA3DXp1TkAhJaPBYJAZs9_YZL53c3HyDQl8LQH2-EMVbaV4D1FLJ8MjKiV9QE0JMhBwt2quTDtv&_nc_ht=scontent.fbho1-1.fna&oh=ea4817ae510755ebc8194f00d3d0b14d&oe=5E543C75",
+    "tags": "india,uttar pradesh,bihar,nickerie,kontraki,girmitiya,bidesiya,pardesi,surinam,dutch,bhojpuri,hindi,hindi bollywood",
+    "countrycode": "SR",
+    "state": "Nickerie",
+    "language": "netherland,dutch,surinam,bhojpuri,hindi",
+    "votes": 21,
+    "codec": "AAC",
+    "bitrate": 48,
+    "hls": 0
+  },
+  {
+    "stationuuid": "02906f39-f0ba-11e9-a96c-52543be04c81",
+    "name": "Neutralradio",
+    "url": "http://listen.radionomy.com/neutralradio",
+    "favicon": "https://neutralradio.000webhostapp.com/gallery_gen/72819037b65c08b93c1b63fe3c708b62.png",
+    "tags": "radio memories,hits 60's,hits 70's,hits 80's,hits 90's,pop,oldies",
+    "countrycode": "SR",
+    "state": "Lelydorp",
+    "language": "dutch/english",
+    "votes": 4,
+    "codec": "MP3",
+    "bitrate": 128,
+    "hls": 0
+  },
+  {
+    "stationuuid": "471413dc-2dd8-11ea-aa0c-52543be04c81",
+    "name": "Radio Garuda",
+    "url": "http://162.244.80.245:8012",
+    "favicon": "https://rtv-garudasuriname.com/wp-content/uploads/2018/12/logo.png",
+    "tags": "dutch,javanese",
+    "countrycode": "SR",
+    "state": "Paramaribo",
+    "language": "javanese,dutch,sranan tongo",
+    "votes": 3,
+    "codec": "MP3",
+    "bitrate": 96,
+    "hls": 0
+  }
+]

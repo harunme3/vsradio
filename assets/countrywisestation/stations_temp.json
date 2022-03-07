@@ -1,0 +1,97 @@
+[
+  {
+    "stationuuid": "9631dea0-0601-11e8-ae97-52543be041c8",
+    "name": "Red FM 93.5",
+    "url": "http://prclive1.listenon.in:8808/",
+    "favicon": "https://myradiobucket.s3.eu-west-1.amazonaws.com/IN_3_WhatsApp+Bhabhi.jpg",
+    "tags": "FM 93.5, Music",
+    "countrycode": "IN",
+    "state": "",
+    "language": "hindi",
+    "votes": 15675,
+    "codec": "AAC",
+    "bitrate": 128,
+    "hls": 0
+  },
+  {
+    "stationuuid": "1000000e-d8a2-11e9-a861-52543ba04095",
+    "name": "亞太電台92.3",
+    "url": "https://usher.ttvnw.net/api/channel/hls/asiafm923.m3u8?allow_source=true&fast_bread=true&p=1463534&play_session_id=7bf6f8774b9518bdeabf24c4e0c7f48f&player_backend=mediaplayer&playlist_include_framerate=true&reassignments_supported=true&sig=4192f4573ac023fd102972d09290b035ed055d3a&supported_codecs=avc1&token=%7B%22adblock%22%3Afalse%2C%22authorization%22%3A%7B%22forbidden%22%3Afalse%2C%22reason%22%3A%22%22%7D%2C%22blackout_enabled%22%3Afalse%2C%22channel%22%3A%22asiafm923%22%2C%22channel_id%22%3A421141118%2C%22chansub%22%3A%7B%22restricted_bitrates%22%3A%5B%5D%2C%22view_until%22%3A1924905600%7D%2C%22ci_gb%22%3Afalse%2C%22geoblock_reason%22%3A%22%22%2C%22device_id%22%3A%22a528a013c8148df6%22%2C%22expires%22%3A1640260222%2C%22extended_history_allowed%22%3Afalse%2C%22game%22%3A%22%22%2C%22hide_ads%22%3Afalse%2C%22https_required%22%3Atrue%2C%22mature%22%3Afalse%2C%22partner%22%3Afalse%2C%22platform%22%3A%22web%22%2C%22player_type%22%3A%22embed%22%2C%22private%22%3A%7B%22allowed_to_view%22%3Atrue%7D%2C%22privileged%22%3Afalse%2C%22role%22%3A%22%22%2C%22server_ads%22%3Atrue%2C%22show_ads%22%3Atrue%2C%22subscriber%22%3Afalse%2C%22turbo%22%3Afalse%2C%22user_id%22%3Anull%2C%22user_ip%22%3A%22211.21.210.181%22%2C%22version%22%3A2%7D&cdm=wv&player_version=1.7.0",
+    "favicon": "https://www.asiafm.com.tw/wp-content/uploads/2021/07/%E5%AE%98%E7%B6%B2%E6%9B%B4%E6%96%B0_%E6%94%B6%E8%81%BD%E5%B0%8F%E5%9C%96_923.jpg",
+    "tags": "Music",
+    "countrycode": "TW",
+    "state": "",
+    "language": "chinese",
+    "votes": 12,
+    "codec": "MP3",
+    "bitrate": "32",
+    "hls": 1
+  },
+  {
+    "stationuuid": "1000000e-d8a2-11e9-a861-52543ba04096",
+    "name": "亞太電台92.7",
+    "url": "https://usher.ttvnw.net/api/channel/hls/asiafm.m3u8?allow_source=true&fast_bread=true&p=9395554&play_session_id=33ef0304cfe31e503f57f7e2d1d42f6a&player_backend=mediaplayer&playlist_include_framerate=true&reassignments_supported=true&sig=6294ba65da89ac42ae780ee06cdd48d030f21e5d&supported_codecs=avc1&token=%7B%22adblock%22%3Afalse%2C%22authorization%22%3A%7B%22forbidden%22%3Afalse%2C%22reason%22%3A%22%22%7D%2C%22blackout_enabled%22%3Afalse%2C%22channel%22%3A%22asiafm%22%2C%22channel_id%22%3A417851977%2C%22chansub%22%3A%7B%22restricted_bitrates%22%3A%5B%5D%2C%22view_until%22%3A1924905600%7D%2C%22ci_gb%22%3Afalse%2C%22geoblock_reason%22%3A%22%22%2C%22device_id%22%3A%22a528a013c8148df6%22%2C%22expires%22%3A1640260336%2C%22extended_history_allowed%22%3Afalse%2C%22game%22%3A%22%22%2C%22hide_ads%22%3Afalse%2C%22https_required%22%3Atrue%2C%22mature%22%3Afalse%2C%22partner%22%3Afalse%2C%22platform%22%3A%22web%22%2C%22player_type%22%3A%22embed%22%2C%22private%22%3A%7B%22allowed_to_view%22%3Atrue%7D%2C%22privileged%22%3Afalse%2C%22role%22%3A%22%22%2C%22server_ads%22%3Atrue%2C%22show_ads%22%3Atrue%2C%22subscriber%22%3Afalse%2C%22turbo%22%3Afalse%2C%22user_id%22%3Anull%2C%22user_ip%22%3A%22211.21.210.181%22%2C%22version%22%3A2%7D&cdm=wv&player_version=1.7.0",
+    "favicon": "https://www.asiafm.com.tw/wp-content/uploads/2021/07/%E5%AE%98%E7%B6%B2%E6%9B%B4%E6%96%B0_%E6%94%B6%E8%81%BD%E5%B0%8F%E5%9C%96_927.jpg",
+    "tags": "Music",
+    "countrycode": "TW",
+    "state": "",
+    "language": "chinese",
+    "votes": 12,
+    "codec": "MP3",
+    "bitrate": "32",
+    "hls": 1
+  },
+  {
+    "stationuuid": "1000000e-d8a2-11e9-a861-52543ba04097",
+    "name": "飛揚調頻89.5",
+    "url": "https://usher.ttvnw.net/api/channel/hls/flyradio895.m3u8?allow_source=true&fast_bread=true&p=735410&play_session_id=ae7e42396f50439e61851212bb6b7e8a&player_backend=mediaplayer&playlist_include_framerate=true&reassignments_supported=true&sig=ff5467fd56682efe146234c7ec5536874b71a537&supported_codecs=avc1&token=%7B%22adblock%22%3Afalse%2C%22authorization%22%3A%7B%22forbidden%22%3Afalse%2C%22reason%22%3A%22%22%7D%2C%22blackout_enabled%22%3Afalse%2C%22channel%22%3A%22flyradio895%22%2C%22channel_id%22%3A421182777%2C%22chansub%22%3A%7B%22restricted_bitrates%22%3A%5B%5D%2C%22view_until%22%3A1924905600%7D%2C%22ci_gb%22%3Afalse%2C%22geoblock_reason%22%3A%22%22%2C%22device_id%22%3A%22a528a013c8148df6%22%2C%22expires%22%3A1640260385%2C%22extended_history_allowed%22%3Afalse%2C%22game%22%3A%22%22%2C%22hide_ads%22%3Afalse%2C%22https_required%22%3Atrue%2C%22mature%22%3Afalse%2C%22partner%22%3Afalse%2C%22platform%22%3A%22web%22%2C%22player_type%22%3A%22embed%22%2C%22private%22%3A%7B%22allowed_to_view%22%3Atrue%7D%2C%22privileged%22%3Afalse%2C%22role%22%3A%22%22%2C%22server_ads%22%3Atrue%2C%22show_ads%22%3Atrue%2C%22subscriber%22%3Afalse%2C%22turbo%22%3Afalse%2C%22user_id%22%3Anull%2C%22user_ip%22%3A%22211.21.210.181%22%2C%22version%22%3A2%7D&cdm=wv&player_version=1.7.0",
+    "favicon": "https://www.asiafm.com.tw/wp-content/uploads/2018/01/c81e728d9d4c2f636f067f89cc14862c-1.jpg",
+    "tags": "Music",
+    "countrycode": "TW",
+    "state": "",
+    "language": "chinese",
+    "votes": 12,
+    "codec": "MP3",
+    "bitrate": "32",
+    "hls": 1
+  },
+  {
+    "stationuuid": "220ef4aa-6922-11e8-b15b-52543be04c81",
+    "name": "Mitre",
+    "url": "https://8433.brasilstream.com.br/stream",
+    "favicon": "https://radiomitre.cienradios.com/wp-content/uploads/sites/3/2016/06/logo-mitre-2.png",
+    "tags": "am,mitre,",
+    "countrycode": "AR",
+    "state": "Capitál Federal",
+    "language": "español",
+    "votes": 175,
+    "codec": "AAC",
+    "bitrate": 32,
+    "hls": 0
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]

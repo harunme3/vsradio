@@ -1,0 +1,44 @@
+[
+  {
+    "stationuuid": "0a728f27-f271-11e9-a96c-52543be04c81",
+    "name": "Sudan TV",
+    "url": "http://s3.myradiostream.com:15918/;audio.mp3",
+    "favicon": "http://srtc.gov.sd/home/wp-content/themes/radio_tv/images/tv_logo.png",
+    "tags": "",
+    "countrycode": "SD",
+    "state": "Khartoum",
+    "language": "arabic",
+    "votes": 84,
+    "codec": "UNKNOWN",
+    "bitrate": 0,
+    "hls": 0
+  },
+  {
+    "stationuuid": "754cec66-a07c-41dd-a67d-8233f1cd5557",
+    "name": "راديو الرابعة",
+    "url": "https://streams.radio.co/s909325731/listen?ver=97613",
+    "favicon": "https://streams.radio.co/s909325731/listen?ver=97613",
+    "tags": "",
+    "countrycode": "SD",
+    "state": "qqqe",
+    "language": "arabic",
+    "votes": 13,
+    "codec": "MP3",
+    "bitrate": 128,
+    "hls": 0
+  },
+  {
+    "stationuuid": "ca5ae346-0a7e-4fef-8679-1d37651c6080",
+    "name": "radio alrabaa",
+    "url": "https://streams.radio.co/s909325731/listen?ver=97613",
+    "favicon": "https://www.alrabaafm.com",
+    "tags": "",
+    "countrycode": "SD",
+    "state": "Khartoum",
+    "language": "arabic",
+    "votes": 4,
+    "codec": "MP3",
+    "bitrate": 128,
+    "hls": 0
+  }
+]

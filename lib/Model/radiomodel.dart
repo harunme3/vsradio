@@ -1,13 +1,11 @@
-class RadioData {}
+class RadioData {
+  RadioData({required this.classDataSet});
 
-class ClassDataSet {
-  ClassDataSet({required this.classDataSet});
-
-  factory ClassDataSet.fromJson(Map<String, dynamic> data) {
+  factory RadioData.fromJson(Map<String, dynamic> data) {
     var list = data['class_dataset'] as List;
     List<ClassNameDataSet> classDataSetlist =
         list.map((e) => ClassNameDataSet.fromJson(e)).toList();
-    return ClassDataSet(classDataSet: classDataSetlist);
+    return RadioData(classDataSet: classDataSetlist);
   }
 
   final List<ClassNameDataSet> classDataSet;

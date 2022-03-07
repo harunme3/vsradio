@@ -1,0 +1,72 @@
+[
+  {
+    "stationuuid": "1d050fd9-0689-11e9-a80b-52543be04c81",
+    "name": "Cherry Radio",
+    "url": "https://node-23.zeno.fm/9ca113gfgrruv?rj-ttl=5&rj-tok=AAABeW6Q0gkA_z7pqNp9dN0T8Q",
+    "favicon": "http://sites.cyamyanmar.com/cherryfm/wp-content/uploads/2018/02/AppIcon167.png",
+    "tags": "",
+    "countrycode": "MM",
+    "state": "Yangon",
+    "language": "burmese",
+    "votes": 571,
+    "codec": "AAC",
+    "bitrate": 48,
+    "hls": 0
+  },
+  {
+    "stationuuid": "e90537d7-8480-11e9-aa30-52543be04c81",
+    "name": "Myanmar International TV",
+    "url": "https://podcasts.srf.ch/world/audio/International_24-04-2021-0908.1619189896116.mp3?assetId=7ea05f3e-38ef-42d0-b498-eed9165a5a0a",
+    "favicon": "http://www.myanmaritv.com/sites/all/themes/zino_theme/logo-2.png",
+    "tags": "",
+    "countrycode": "MM",
+    "state": "Yangon",
+    "language": "english",
+    "votes": 53,
+    "codec": "UNKNOWN",
+    "bitrate": 0,
+    "hls": 0
+  },
+  {
+    "stationuuid": "d7f654fc-89b7-11e9-ad01-52543be04c81",
+    "name": "Myanmar Channel 9 TV",
+    "url": "http://220.158.149.14:9999/live/TV00000000000000000091@HHZT",
+    "favicon": "https://www.lyngsat.com/logo/tv/cc/channel_9_mm.png",
+    "tags": "",
+    "countrycode": "MM",
+    "state": "Yangon",
+    "language": "burmese",
+    "votes": 44,
+    "codec": "UNKNOWN",
+    "bitrate": 0,
+    "hls": 0
+  },
+  {
+    "stationuuid": "991acdd7-847e-11e9-aa30-52543be04c81",
+    "name": "Myanmar TV",
+    "url": "http://220.158.149.14:9999/live/TV00000000000000000089@HHZT",
+    "favicon": "http://upload.wikimedia.org/wikipedia/en/thumb/2/22/MRTV_new_logo.png/150px-MRTV_new_logo.png",
+    "tags": "",
+    "countrycode": "MM",
+    "state": "Yangon",
+    "language": "burmese",
+    "votes": 42,
+    "codec": "UNKNOWN",
+    "bitrate": 0,
+    "hls": 0
+  },
+  {
+    "stationuuid": "1d6a1e3b-3dcd-11ea-8dd7-52543be04c81",
+    "name": "Channel K",
+    "url": "http://d3cs5y5559s57s.cloudfront.net/live/channelk.m3u8",
+    "favicon": "http://nettv.live/uploads/allimg/20/1-2001231401150-L.jpg",
+    "tags": "",
+    "countrycode": "MM",
+    "state": "Yangon",
+    "language": "burmese",
+    "votes": 3,
+    "codec": "UNKNOWN",
+    "bitrate": 0,
+    "hls": 1
+  }
+]
