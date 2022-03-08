@@ -21,7 +21,7 @@ class ShareApp extends StatelessWidget {
       onTap: () => {
         Share.share(
             'https://play.google.com/store/apps/details?id=com.vs.ncertclass10th',
-            subject: "For NCERT Solution install this App from Play store")
+            subject: 'For NCERT Solution install this App from Play store')
       },
     );
   }

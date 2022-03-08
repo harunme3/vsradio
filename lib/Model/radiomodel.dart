@@ -1,26 +1,61 @@
-class RadioData {
-  RadioData({required this.classDataSet});
+import 'package:logger/logger.dart';
 
-  factory RadioData.fromJson(Map<String, dynamic> data) {
-    var list = data['class_dataset'] as List;
-    List<ClassNameDataSet> classDataSetlist =
-        list.map((e) => ClassNameDataSet.fromJson(e)).toList();
-    return RadioData(classDataSet: classDataSetlist);
+var l = Logger();
+
+class RadioData {
+  RadioData({required this.radioDataSet});
+
+  factory RadioData.fromJson(List list) {
+    List<RadioStationData> radioDataSetlist =
+        list.map((e) => RadioStationData.fromJson(e)).toList();
+    return RadioData(radioDataSet: radioDataSetlist);
   }
 
-  final List<ClassNameDataSet> classDataSet;
+  final List<RadioStationData> radioDataSet;
 }
 
-class ClassNameDataSet {
-  ClassNameDataSet({required this.className, required this.classImageSrc});
+class RadioStationData {
+  RadioStationData(
+      {required this.stationuuid,
+      required this.name,
+      required this.url,
+      required this.favicon,
+      required this.tags,
+      required this.countrycode,
+      required this.state,
+      required this.language,
+      this.votes,
+      required this.codec,
+      this.bitrate,
+      this.hls});
 
-  factory ClassNameDataSet.fromJson(Map<String, dynamic> data) {
-    return ClassNameDataSet(
-      className: data['class_name'],
-      classImageSrc: data['class_image_src'],
+  factory RadioStationData.fromJson(Map<String, dynamic> data) {
+    return RadioStationData(
+      stationuuid: data['stationuuid'],
+      name: data['name'],
+      url: data['url'],
+      favicon: data['favicon'],
+      tags: data['tags'],
+      countrycode: data['countrycode'],
+      state: data['state'],
+      language: data['language'],
+      votes: data['votes'],
+      codec: data['codec'],
+      bitrate: data[' bitrate'],
+      hls: data['hls'],
     );
   }
 
-  final String classImageSrc;
-  final String className;
+  final String stationuuid;
+  final String name;
+  final String url;
+  final String favicon;
+  final String tags;
+  final String countrycode;
+  final String state;
+  final String language;
+  final int? votes;
+  final String codec;
+  final int? bitrate;
+  final int? hls;
 }

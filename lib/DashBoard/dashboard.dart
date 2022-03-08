@@ -1,10 +1,9 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:radio/Drawer/drawer.dart';
-import 'package:radio/Screen/explorescreen/explorescreen.dart';
-import 'package:radio/Screen/favoritedashboard/favoritedashboard.dart';
-import 'package:radio/Screen/homedashboard/homedashboard.dart';
-import 'package:radio/Screen/profilescreen/profilescreen.dart';
+import 'package:radio/appdashboard/explorescreen/explorescreen.dart';
+import 'package:radio/appdashboard/favoritedashboard/favoritedashboard.dart';
+import 'package:radio/appdashboard/homedashboard/homedashboard.dart';
+import 'package:radio/appdashboard/profilescreen/profilescreen.dart';
 
 class DashBoard extends StatefulWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -18,7 +17,40 @@ class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(
+            Icons.menu_outlined,
+          ),
+          onPressed: () => Scaffold.of(context).openDrawer(),
+        ),
+        title: Container(
+          width: double.infinity,
+          height: 40,
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(5)),
+          child: Center(
+            child: TextField(
+              decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.search),
+                  suffixIcon: IconButton(
+                    icon: Icon(Icons.clear),
+                    onPressed: () {
+                      /* Clear the search field */
+                    },
+                  ),
+                  hintText: 'Search...',
+                  border: InputBorder.none),
+            ),
+          ),
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.menu_outlined),
+            onPressed: () {},
+          ),
+        ],
+      ),
       body: buildPages(),
       bottomNavigationBar: BottomNavyBar(
         selectedIndex: _selectedIndex,
