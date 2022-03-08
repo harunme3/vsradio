@@ -30,18 +30,12 @@ class _HomeDashBoardState extends State<HomeDashBoard>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomSheet: Container(
-        width: double.infinity,
-        child: Text(
-          'data',
-          textAlign: TextAlign.center,
-        ),
-      ),
       appBar: AppBar(
         toolbarHeight: 0,
         bottom: TabBar(
           controller: _tabController,
           isScrollable: true,
+          physics: BouncingScrollPhysics(),
           tabs: const <Tab>[
             Tab(
               text: 'Recommend',

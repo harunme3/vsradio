@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:radio/Model/radiomodel.dart';
 
 class RecentPlayed extends StatelessWidget {
-  final RadioData radioData;
+  final RadioData? radioData;
 
-  const RecentPlayed({Key? key, required this.radioData}) : super(key: key);
+  const RecentPlayed({Key? key, this.radioData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +62,7 @@ class RecentPlayed extends StatelessWidget {
                     padding: const EdgeInsets.all(12.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
+                      children: const <Widget>[
                         Text(
                           "Newest",
                           style: TextStyle(
@@ -95,7 +95,7 @@ class RecentPlayed extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        radioData.radioDataSet[0].name,
+                        radioData?.radioDataSet[0].name ?? 'Basket',
                         style: TextStyle(
                             fontSize: 25,
                             color: Colors.white,

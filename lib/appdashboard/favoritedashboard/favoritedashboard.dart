@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:radio/TabScreenFavorite/Favoritescreen/favoritescreen.dart';
 import 'package:radio/TabScreenFavorite/Recentscreen/recentscreen.dart';
@@ -33,6 +35,7 @@ class _FavoriteDashBoardState extends State<FavoriteDashBoard>
         bottom: TabBar(
           controller: _tabController,
           isScrollable: true,
+          physics: BouncingScrollPhysics(),
           tabs: const <Tab>[
             Tab(
               text: 'Favorite',

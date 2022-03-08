@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
-import 'dart:html';
-
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -30,9 +28,14 @@ class _PlayDashBoardCheckState extends State<PlayDashBoardCheck> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           //ads
+          Container(
+            height: 250,
+            width: double.maxFinite,
+            child: Image.asset('assets/Image/ad.png'),
+          ),
           //animation
           Lottie.asset(
-            'assets/LottieLogo1.json',
+            'assets/lottie/rythum.json',
           ),
           Container(
             child: AutoSizeText('tere gam agar na hota to sharab'),

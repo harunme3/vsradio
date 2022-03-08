@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:radio/Drawer/drawer.dart';
@@ -18,6 +19,13 @@ class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomSheet: Container(
+        width: double.infinity,
+        child: Text(
+          'data',
+          textAlign: TextAlign.center,
+        ),
+      ),
       drawer: Drawer(
         child: MyDrawer(),
         backgroundColor: Color.fromARGB(255, 9, 71, 185),
