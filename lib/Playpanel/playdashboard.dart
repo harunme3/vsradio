@@ -5,7 +5,9 @@ import 'package:just_audio/just_audio.dart';
 
 class PlayDashBoard extends StatefulWidget {
   final String url;
-  const PlayDashBoard({Key? key, required this.url}) : super(key: key);
+  final String favicon;
+  const PlayDashBoard({Key? key, required this.url, required this.favicon})
+      : super(key: key);
 
   @override
   State<PlayDashBoard> createState() => _PlayDashBoardState();
@@ -66,33 +68,35 @@ class _PlayDashBoardState extends State<PlayDashBoard>
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
-        width: double.maxFinite,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            StreamBuilder<IcyMetadata?>(
-              stream: _player.icyMetadataStream,
-              builder: (context, snapshot) {
-                final metadata = snapshot.data;
-                final title = metadata?.info?.title ?? '';
-                final url = metadata?.info?.url;
-                return Column(
-                  children: [
-                    if (url != null) Image.network(url),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 8.0),
-                      child: Text(title,
-                          style: Theme.of(context).textTheme.headline6),
-                    ),
-                  ],
-                );
-              },
-            ),
-            // Display play/pause button and volume/speed sliders.
-            ControlButtons(_player),
-          ],
+      child: Scaffold(
+        body: Container(
+          width: double.maxFinite,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              StreamBuilder<IcyMetadata?>(
+                stream: _player.icyMetadataStream,
+                builder: (context, snapshot) {
+                  final metadata = snapshot.data;
+                  final title = metadata?.info?.title ?? '';
+                  final url = metadata?.info?.url;
+                  return Column(
+                    children: [
+                      Image.network(widget.favicon),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8.0),
+                        child: Text(title,
+                            style: Theme.of(context).textTheme.headline6),
+                      ),
+                    ],
+                  );
+                },
+              ),
+              // Display play/pause button and volume/speed sliders.
+              ControlButtons(_player),
+            ],
+          ),
         ),
       ),
     );
@@ -103,13 +107,18 @@ class _PlayDashBoardState extends State<PlayDashBoard>
 class ControlButtons extends StatelessWidget {
   final AudioPlayer player;
 
-  ControlButtons(this.player);
+  ControlButtons(this.player, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
+        IconButton(
+          icon: Icon(Icons.volume_up),
+          onPressed: () {},
+        ),
+
         /// This StreamBuilder rebuilds whenever the player state changes, which
         /// includes the playing/paused state and also the
         /// loading/buffering/ready state. Depending on the state we show the

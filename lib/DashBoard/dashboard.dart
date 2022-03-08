@@ -23,6 +23,7 @@ class _DashBoardState extends State<DashBoard> {
         backgroundColor: Color.fromARGB(255, 9, 71, 185),
       ),
       appBar: AppBar(
+        elevation: 0,
         title: Container(
           width: double.infinity,
           height: 40,
@@ -45,7 +46,7 @@ class _DashBoardState extends State<DashBoard> {
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.menu_outlined),
+            icon: Icon(Icons.sort_outlined),
             onPressed: () {},
           ),
         ],
@@ -59,21 +60,21 @@ class _DashBoardState extends State<DashBoard> {
         }),
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
-            icon: Icon(Icons.apps),
+            icon: Icon(Icons.home_outlined),
             title: Text('Home'),
             activeColor: Colors.red,
           ),
           BottomNavyBarItem(
-              icon: Icon(Icons.people),
-              title: Text('Users'),
+              icon: Icon(Icons.explore_outlined),
+              title: Text('Explore'),
               activeColor: Colors.purpleAccent),
           BottomNavyBarItem(
-              icon: Icon(Icons.message),
-              title: Text('Messages'),
+              icon: Icon(Icons.favorite_border_outlined),
+              title: Text('Favorite'),
               activeColor: Colors.pink),
           BottomNavyBarItem(
-              icon: Icon(Icons.settings),
-              title: Text('Settings'),
+              icon: Icon(Icons.face_outlined),
+              title: Text('Profile'),
               activeColor: Colors.blue),
         ],
       ),

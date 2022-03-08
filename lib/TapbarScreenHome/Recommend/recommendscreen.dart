@@ -107,10 +107,15 @@ class _RecommendScreenState extends State<RecommendScreen> {
                                                 MaterialPageRoute(
                                                     builder: (context) =>
                                                         PlayDashBoard(
-                                                            url: data
-                                                                .radioDataSet[
-                                                                    index]
-                                                                .url)));
+                                                          url: data
+                                                              .radioDataSet[
+                                                                  index]
+                                                              .url,
+                                                          favicon: data
+                                                              .radioDataSet[
+                                                                  index]
+                                                              .favicon,
+                                                        )));
                                           },
                                           child: Icon(Icons.play_arrow),
                                         ),

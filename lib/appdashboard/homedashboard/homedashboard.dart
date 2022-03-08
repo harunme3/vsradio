@@ -38,6 +38,7 @@ class _HomeDashBoardState extends State<HomeDashBoard>
         ),
       ),
       appBar: AppBar(
+        toolbarHeight: 0,
         bottom: TabBar(
           controller: _tabController,
           isScrollable: true,

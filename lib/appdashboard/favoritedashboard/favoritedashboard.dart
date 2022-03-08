@@ -29,17 +29,16 @@ class _FavoriteDashBoardState extends State<FavoriteDashBoard>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 0,
         bottom: TabBar(
           controller: _tabController,
           isScrollable: true,
           tabs: const <Tab>[
             Tab(
               text: 'Favorite',
-              icon: Icon(Icons.home),
             ),
             Tab(
               text: 'Recent Played',
-              icon: Icon(Icons.home),
             ),
           ],
         ),
