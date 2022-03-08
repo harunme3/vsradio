@@ -11,7 +11,8 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        Provider<StationProvider>(create: (_) => StationProvider('bo')),
+        ChangeNotifierProvider<StationProvider>(
+            create: (context) => StationProvider('in')),
       ],
       child: MyApp(),
     ),

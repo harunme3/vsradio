@@ -10,19 +10,13 @@ import 'package:radio/Drawer/Setting/setting.dart';
 import 'package:radio/Drawer/Share_App/share_app.dart';
 import 'package:radio/Drawer/Timermenu/timermenu.dart';
 
-class MyDrawer extends StatefulWidget {
+class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);
 
-  @override
-  State<MyDrawer> createState() => _MyDrawerState();
-}
-
-class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      color: Colors.white,
       padding: EdgeInsets.only(
           top: size.height / 25,
           bottom: size.height / 25,

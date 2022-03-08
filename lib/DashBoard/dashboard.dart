@@ -1,5 +1,6 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:radio/Drawer/drawer.dart';
 import 'package:radio/appdashboard/explorescreen/explorescreen.dart';
 import 'package:radio/appdashboard/favoritedashboard/favoritedashboard.dart';
 import 'package:radio/appdashboard/homedashboard/homedashboard.dart';
@@ -17,13 +18,11 @@ class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: MyDrawer(),
+        backgroundColor: Color.fromARGB(255, 9, 71, 185),
+      ),
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(
-            Icons.menu_outlined,
-          ),
-          onPressed: () => Scaffold.of(context).openDrawer(),
-        ),
         title: Container(
           width: double.infinity,
           height: 40,

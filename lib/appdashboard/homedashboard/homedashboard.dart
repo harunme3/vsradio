@@ -30,6 +30,13 @@ class _HomeDashBoardState extends State<HomeDashBoard>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomSheet: Container(
+        width: double.infinity,
+        child: Text(
+          'data',
+          textAlign: TextAlign.center,
+        ),
+      ),
       appBar: AppBar(
         bottom: TabBar(
           controller: _tabController,
@@ -37,19 +44,15 @@ class _HomeDashBoardState extends State<HomeDashBoard>
           tabs: const <Tab>[
             Tab(
               text: 'Recommend',
-              icon: Icon(Icons.home),
             ),
             Tab(
               text: 'Language',
-              icon: Icon(Icons.home),
             ),
             Tab(
               text: 'Countries',
-              icon: Icon(Icons.home),
             ),
             Tab(
               text: 'Top station',
-              icon: Icon(Icons.home),
             ),
           ],
         ),
