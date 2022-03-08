@@ -30,6 +30,7 @@ class RadioStationData {
       this.hls});
 
   factory RadioStationData.fromJson(Map<String, dynamic> data) {
+    l.e(data);
     return RadioStationData(
       stationuuid: data['stationuuid'],
       name: data['name'],

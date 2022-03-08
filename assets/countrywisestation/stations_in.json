@@ -1408,10 +1408,10 @@
     "countrycode": "IN",
     "state": "",
     "language": "english,hindi,gujarati",
-    "votes": "12",
+    "votes": 12,
     "codec": "MP3",
-    "bitrate": "128",
-    "hls": "1"
+    "bitrate": 128,
+    "hls": 1
   },
   {
     "stationuuid": "9d5f23be-1315-11e8-ae97-52543aa04a81",
@@ -3307,6 +3307,7 @@
     "stationuuid": "cbdca2e5-8796-11e9-aa30-52543be04c81",
     "name": "New Delhi Profit TV",
     "url": "http://ndtvprofitelemarchana.akamaized.net/hls/live/2003680/ndtvprofit/masterp_480p@3.m3u8",
+    "favicon": "",
     "tags": "",
     "countrycode": "IN",
     "state": "Delhi",
