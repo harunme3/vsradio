@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:radio/Provider/stationprovider.dart';
+import 'package:radio/Providers/stationprovider.dart';
 import 'package:radio/splashscreen/splashscreen.dart';
 
 void main() {

@@ -10,7 +10,7 @@ import 'package:radio/Model/radiomodel.dart';
 import 'package:provider/provider.dart';
 import 'package:radio/Playpanel/playdashboard.dart';
 import 'package:radio/Playpanel/playdashboardcheck.dart';
-import 'package:radio/Provider/stationprovider.dart';
+import 'package:radio/Providers/stationprovider.dart';
 import 'package:radio/TapbarScreenHome/Recommend/Recentplayed/recentplayed.dart';
 
 class RecommendScreen extends StatefulWidget {
