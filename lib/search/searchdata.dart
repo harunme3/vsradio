@@ -1,32 +1,22 @@
-import 'dart:convert';
-
-import 'package:flutter/services.dart';
+import 'package:logger/logger.dart';
 import 'package:radio/Model/flagmodel.dart';
 import 'package:radio/Model/radiomodel.dart';
-
-Future<RadioData> loadradiodata(String countryCode) async {
-  String jsonstring = await rootBundle
-      .loadString('assets/countrywisestation/stations_$countryCode.json');
-  final jsonresponse = json.decode(jsonstring);
-  return RadioData.fromJson(jsonresponse);
-}
-
-Future<CountrySet> loadflagdata() async {
-  String jsonstring = await rootBundle.loadString('assets/flag/flag.json');
-  final jsonresponse = json.decode(jsonstring);
-  return CountrySet.fromJson(jsonresponse);
-}
+import 'package:radio/search/loaddata.dart';
 
 class Searchdata {
-  serchbytag(String tag) async {
+ 
+ static Future<List<RadioStationData>> serchbytag(String tag) async {
+    var l=Logger();
+    l.w('called');
     List<RadioStationData> list = [];
-    final CountrySet countrySet = await loadflagdata();
+    final CountrySet countrySet = await Loaddata.loadflagdata();
     List<String> countrycodelist = [];
     for (var i = 0; i < countrySet.flagDataSet.length; i++) {
       countrycodelist.add(countrySet.flagDataSet[i].code);
+      l.w('message');
     }
-    for (var countryCode in countrycodelist) {
-      final RadioData radiodata = await loadradiodata(countryCode);
+    for (var countryCode in ['in']) {
+      final RadioData radiodata = await Loaddata.loadradiodata(countryCode);
 
       for (var i = 0; i < radiodata.radioDataSet.length; i++) {
         RegExp regexp = RegExp(
@@ -38,18 +28,20 @@ class Searchdata {
         }
       }
     }
+    l.e(list);
+    return list;
   }
 
-  serchbylanguage(String language) async {
+  static Future<List<RadioStationData>> serchbylanguage(String language) async {
     List<RadioStationData> list = [];
-    final CountrySet countrySet = await loadflagdata();
+    final CountrySet countrySet = await Loaddata.loadflagdata();
     List<String> countrycodelist = [];
     for (var i = 0; i < countrySet.flagDataSet.length; i++) {
       countrycodelist.add(countrySet.flagDataSet[i].code);
     }
 
     for (var countryCode in countrycodelist) {
-      final RadioData radiodata = await loadradiodata(countryCode);
+      final RadioData radiodata = await Loaddata.loadradiodata(countryCode);
 
       for (var i = 0; i < radiodata.radioDataSet.length; i++) {
         RegExp regexp = RegExp(
@@ -61,12 +53,13 @@ class Searchdata {
         }
       }
     }
+    return list;
   }
 
-  toplistenbyvotes(int top, String countryCode) async {
+ static Future<List<RadioStationData>> toplistenbyvotes(int top, String countryCode) async {
     List<RadioStationData> list = [];
     List<int> listvote = [];
-    final RadioData radiodata = await loadradiodata('in');
+    final RadioData radiodata = await Loaddata.loadradiodata('in');
 
     for (var i = 0; i < radiodata.radioDataSet.length; i++) {
       listvote.add(radiodata.radioDataSet[i].votes ?? 0);
@@ -87,5 +80,7 @@ class Searchdata {
         break;
       }
     }
+     return list;
   }
+ 
 }

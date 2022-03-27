@@ -21,12 +21,10 @@ class RecommendScreen extends StatefulWidget {
 }
 
 class _RecommendScreenState extends State<RecommendScreen> {
-  var l = Logger();
-
-
   @override
   Widget build(BuildContext context) {
-  String countrycode=Provider.of<CountryProvider>(context, listen: false).getselectedcountry;
+    String countrycode =
+        Provider.of<CountryProvider>(context, listen: false).getselectedcountry;
     return FutureBuilder<RadioData>(
       future: Provider.of<CountryProvider>(context)
           .loadJsonDataSet(countrycode), // async work
@@ -71,7 +69,11 @@ class _RecommendScreenState extends State<RecommendScreen> {
                                     height: 100,
                                     width: 100,
                                     child: Image.network(
-                                        data.radioDataSet[index].favicon),
+                                      data.radioDataSet[index].favicon,
+                                      errorBuilder:(context, error, stackTrace) {
+                                         return Image.asset('assets/Image/happy.jpg');
+                                      }, 
+                                    ),
                                   ),
                                 ),
                                 Expanded(
