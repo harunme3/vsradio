@@ -17,7 +17,8 @@ class CountryProvider with ChangeNotifier {
           .loadString('assets/countrywisestation/stations_$countryCode.json');
       final jsonresponse = json.decode(jsonstring);
       return RadioData.fromJson(jsonresponse);
-    } else {
+    } else {print('====================================');
+
       String jsonstring = await rootBundle
           .loadString('assets/countrywisestation/stations_$countryCode.json');
       final jsonresponse = json.decode(jsonstring);

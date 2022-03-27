@@ -45,6 +45,24 @@ class _DashBoardState extends State<DashBoard> {
                     icon: Icon(Icons.clear),
                     onPressed: () {
                       /* Clear the search field */
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return Container(
+                            child: ListView.builder( itemCount: 30, itemBuilder: (context,index){
+                         return Row(children: [
+                             Container(child: Text('data')),
+                                Container(child: Text('data2')),
+                         ],);
+                             
+                            }),
+                          );
+                        },
+                        isDismissible: true,
+                 
+                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(16)))
+                     
+                      );
                     },
                   ),
                   hintText: 'Search...',

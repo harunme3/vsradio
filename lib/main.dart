@@ -9,6 +9,7 @@ import 'package:radio/Providers/themeprovider.dart';
 import 'package:radio/hive/favoritehive.dart';
 import 'package:radio/hive/recenthive.dart';
 import 'package:radio/splashscreen/splashscreen.dart';
+import 'package:radio/theme/mytheme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -68,7 +69,11 @@ void dispose() {
       child,
     ) {
       return MaterialApp(
+        themeMode: ThemeMode.system,
+        theme: Mytheme.lighttheme,
+        darkTheme: Mytheme.darktheme,
           debugShowCheckedModeBanner: false, home: SplashScreen());
     });
   }
 }
+ 

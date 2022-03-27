@@ -23,19 +23,13 @@ class RecommendScreen extends StatefulWidget {
 class _RecommendScreenState extends State<RecommendScreen> {
   var l = Logger();
 
-  Future<RadioData> loaddata(String countryCode) async {
-    String jsonstring = await rootBundle
-        .loadString('assets/countrywisestation/stations_$countryCode.json');
-    final jsonresponse = json.decode(jsonstring);
-
-    return RadioData.fromJson(jsonresponse);
-  }
 
   @override
   Widget build(BuildContext context) {
+  String countrycode=Provider.of<CountryProvider>(context, listen: false).getselectedcountry;
     return FutureBuilder<RadioData>(
       future: Provider.of<CountryProvider>(context)
-          .loadJsonDataSet('in'), // async work
+          .loadJsonDataSet(countrycode), // async work
       builder: (BuildContext context, AsyncSnapshot<RadioData> snapshot) {
         switch (snapshot.connectionState) {
           case ConnectionState.waiting:
