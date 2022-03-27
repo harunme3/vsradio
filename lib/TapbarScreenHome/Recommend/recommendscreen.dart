@@ -10,7 +10,7 @@ import 'package:radio/Model/radiomodel.dart';
 import 'package:provider/provider.dart';
 import 'package:radio/Playpanel/playdashboard.dart';
 import 'package:radio/Playpanel/playdashboardcheck.dart';
-import 'package:radio/Providers/stationprovider.dart';
+import 'package:radio/Providers/countryprovider.dart';
 import 'package:radio/TapbarScreenHome/Recommend/Recentplayed/recentplayed.dart';
 
 class RecommendScreen extends StatefulWidget {
@@ -34,7 +34,7 @@ class _RecommendScreenState extends State<RecommendScreen> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<RadioData>(
-      future: Provider.of<StationProvider>(context)
+      future: Provider.of<CountryProvider>(context)
           .loadJsonDataSet('in'), // async work
       builder: (BuildContext context, AsyncSnapshot<RadioData> snapshot) {
         switch (snapshot.connectionState) {
