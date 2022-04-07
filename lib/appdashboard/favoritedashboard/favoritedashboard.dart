@@ -47,7 +47,7 @@ class _FavoriteDashBoardState extends State<FavoriteDashBoard>
         ),
       ),
       body: TabBarView(controller: _tabController, children: const [
-        FavoriteScreen(),
+     FavoriteScreen(),
         RecentScreen(),
       ]),
     );

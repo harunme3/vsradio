@@ -6,6 +6,7 @@ import 'package:radio/appdashboard/explorescreen/explorescreen.dart';
 import 'package:radio/appdashboard/favoritedashboard/favoritedashboard.dart';
 import 'package:radio/appdashboard/homedashboard/homedashboard.dart';
 import 'package:radio/appdashboard/profilescreen/profilescreen.dart';
+import 'package:radio/widgets/playing_navigation.dart';
 
 class DashBoard extends StatefulWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -19,12 +20,9 @@ class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomSheet: Container(
+      bottomSheet: SizedBox(
         width: double.infinity,
-        child: Text(
-          'data',
-          textAlign: TextAlign.center,
-        ),
+        child: playingNavigation(context)
       ),
       drawer: Drawer(
         child: MyDrawer(),
@@ -48,15 +46,13 @@ class _DashBoardState extends State<DashBoard> {
                       showModalBottomSheet(
                         context: context,
                         builder: (BuildContext context) {
-                          return Container(
-                            child: ListView.builder( itemCount: 30, itemBuilder: (context,index){
-                         return Row(children: [
-                             Container(child: Text('data')),
-                                Container(child: Text('data2')),
+                          return ListView.builder( itemCount: 30, itemBuilder: (context,index){
+                         return Row(children: const [
+                           Text('data'),
+                              Text('data2'),
                          ],);
-                             
-                            }),
-                          );
+                           
+                          });
                         },
                         isDismissible: true,
                  

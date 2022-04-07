@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radio/Tagplaylist/tagplaylist.dart';
-import 'package:radio/TapbarScreenHome/Recommend/Recentplayed/recentplayed.dart';
+import 'package:radio/widgets/album_card.dart';
+import 'package:radio/widgets/song_card.dart';
 
 class ExploreScreen extends StatefulWidget {
   const ExploreScreen({Key? key}) : super(key: key);
@@ -13,112 +13,281 @@ class _ExploreScreenState extends State<ExploreScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(
-      children: [
-        RecentPlayed(),
-        Column(
+      body: Stack(
+        alignment: Alignment.topLeft,
+        children: [
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height * .6,
+            decoration: BoxDecoration(
+              color: Color(0xFf1C7A74),
+            ),
+          ),
+          SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.black.withOpacity(0),
+                    Colors.black.withOpacity(.9),
+                    Colors.black.withOpacity(1),
+                    Colors.black.withOpacity(1),
+                    Colors.black.withOpacity(1),
+                  ],
+                ),
+              ),
+              child: SafeArea(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 40),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Recently Played",
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                          Row(
+                            children: [
+                              Icon(Icons.history),
+                              SizedBox(width: 16),
+                              Icon(Icons.settings),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      physics: BouncingScrollPhysics(),
+                      padding: EdgeInsets.all(16),
+                      child: Row(
+                        children: [
+                          AlbumCard(
+                            label: "Best Mode",
+                            image: AssetImage("assets/Image/happy.jpg"),
+                          ),
+                          SizedBox(width: 16),
+                          AlbumCard(
+                            label: "Mot6ivation Mix",
+                            image: AssetImage("assets/Image/happy.jpg"),
+                          ),
+                          SizedBox(width: 16),
+                          AlbumCard(
+                            label: "Top 50-Global",
+                            image: AssetImage("assets/Image/happy.jpg"),
+                          ),
+                          SizedBox(width: 16),
+                          AlbumCard(
+                            label: "Power Gaming",
+                            image: AssetImage("assets/Image/happy.jpg"),
+                          ),
+                          SizedBox(width: 16),
+                          AlbumCard(
+                            label: "Top songs - Global",
+                            image: AssetImage("assets/Image/happy.jpg"),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 32),
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Text(
+                            "Good evening",
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                          SizedBox(height: 16),
+                          Row(
+                            children: [
+                              RowAlbumCard(
+                                label: "Top 50 - Global",
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                              SizedBox(width: 16),
+                              RowAlbumCard(
+                                label: "Best Mode",
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 16),
+                          Row(
+                            children: [
+                              RowAlbumCard(
+                                label: "RapCaviar",
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                              SizedBox(width: 16),
+                              RowAlbumCard(
+                                label: "Eminem",
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 16),
+                          Row(
+                            children: [
+                              RowAlbumCard(
+                                label: "Top 50 - USA",
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                              SizedBox(width: 16),
+                              RowAlbumCard(
+                                label: "Pop Remix",
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Text(
+                            "Based on your recent listening",
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                        ),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          physics: BouncingScrollPhysics(),
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 20,
+                          ),
+                          child: Row(
+                            children: [
+                              SongCard(
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                              SizedBox(width: 16),
+                              SongCard(
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                              SizedBox(width: 16),
+                              SongCard(
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                              SizedBox(width: 16),
+                              SongCard(
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                              SizedBox(width: 16),
+                              SongCard(
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                              SizedBox(width: 16),
+                              SongCard(
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 16),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Text(
+                            "Recommended radio",
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                        ),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          physics: BouncingScrollPhysics(),
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 20,
+                          ),
+                          child: Row(
+                            children: [
+                              SongCard(
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                              SizedBox(width: 16),
+                              SongCard(
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                              SizedBox(width: 16),
+                              SongCard(
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                              SizedBox(width: 16),
+                              SongCard(
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                              SizedBox(width: 16),
+                              SongCard(
+                                image: AssetImage("assets/album3.jpg"),
+                              ),
+                              SizedBox(width: 16),
+                              SongCard(
+                                image: AssetImage("assets/Image/happy.jpg"),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 16),
+                  ],
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class RowAlbumCard extends StatelessWidget {
+  final AssetImage image;
+  final String label;
+ RowAlbumCard({
+    required this.image,
+    required this.label,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 1,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white10,
+          borderRadius: BorderRadius.circular(4),
+        ),
+        clipBehavior: Clip.antiAlias,
+        child: Row(
           children: [
-            Container(
-              child: Text(
-                'Music Radio',
-                textAlign: TextAlign.left,
-              ),
+            Image(
+              image: image,
+              height: 48,
+              width: 48,
+              fit: BoxFit.cover,
             ),
-            GridView.builder(
-              physics: BouncingScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-              ),
-              itemCount: 4,
-              shrinkWrap: true,
-              padding: EdgeInsets.all(8),
-              itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => TagPlaylist()));
-                    },
-                    child: Container(
-                      height: 200,
-                      width: 200,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("assets/Image/happy.jpg"),
-                          fit: BoxFit.cover,
-                        ),
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: Container(
-                        margin: EdgeInsets.fromLTRB(15, 15, 0, 0),
-                        child: Text(
-                          "Mindfulness",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600),
-                        ),
-                      ),
-                    ),
-                  ),
-                );
-              },
-            ),
-            Container(
-              child: Text(
-                'Genere',
-                textAlign: TextAlign.left,
-              ),
-            ),
-            GridView.builder(
-              physics: BouncingScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-              ),
-              itemCount: 16,
-              shrinkWrap: true,
-              padding: EdgeInsets.all(16),
-              itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => TagPlaylist()));
-                    },
-                    child: Container(
-                      height: 200,
-                      width: 200,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("assets/Image/feel.jpg"),
-                          fit: BoxFit.cover,
-                        ),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Container(
-                        margin: EdgeInsets.fromLTRB(15, 15, 0, 0),
-                        child: Text(
-                          "Mindfulness",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600),
-                        ),
-                      ),
-                    ),
-                  ),
-                );
-              },
-            )
+            SizedBox(width: 8),
+            Text(label)
           ],
-        )
-      ],
-    ));
+        ),
+      ),
+    );
   }
 }

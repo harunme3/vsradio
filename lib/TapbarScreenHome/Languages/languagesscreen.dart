@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
+import 'package:radio/Model/langcountmodal.dart';
 import 'package:radio/TapbarScreenHome/Languages/languagedata.dart';
 
 class LanguageScreen extends StatefulWidget {
@@ -9,11 +11,12 @@ class LanguageScreen extends StatefulWidget {
 }
 
 class _LanguageScreenState extends State<LanguageScreen> {
+  var l=Logger();
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<Map<String, int>>(
-        future: LanguageData.gettotalstationlanguagewise(), // async work
-        builder:(BuildContext context, AsyncSnapshot<Map<String, int>> snapshot) {
+    return FutureBuilder<LanginfoSet>(
+        future: LanguageData.loadJsonDataSet(), // async work
+        builder: (BuildContext context, AsyncSnapshot<LanginfoSet> snapshot) {
           switch (snapshot.connectionState) {
             case ConnectionState.waiting:
               return SafeArea(
@@ -25,13 +28,18 @@ class _LanguageScreenState extends State<LanguageScreen> {
               if (snapshot.hasError) {
                 return Text('Error: ${snapshot.error}');
               } else {
-                Map<String, int> data = snapshot.data!;
-                return Container(
-                  child: ListView.builder(itemCount: data.length,itemBuilder: (context, index) {
-
-                    return Container(child: Text(data[index].toString()));
-                  }),
-                );
+                var data = snapshot.data!;
+                return ListView.builder(
+                    itemCount: data.langDataSet.length,
+                    itemBuilder: (context, index) {
+                      return ElevatedButton(
+                        onPressed: (){
+l.e('message');
+                        },
+                        child: Text(
+                            data.langDataSet[index].languagename.toString()),
+                      );
+                    });
               }
           }
         });

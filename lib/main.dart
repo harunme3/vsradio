@@ -24,7 +24,7 @@ final countrydb=await Hive.openBox<String>('countrycode');
 final languagedb=await Hive.openBox<String>('languagecode');
 //custom adopter
 final recentdb=await Hive.openBox<RecentHive>('recent');
-final favoritedb=await Hive.openBox<RecentHive>('favorite');
+final favoritedb=await Hive.openBox<FavoriteHive>('favorite');
    Hive.registerAdapter(RecentHiveAdapter());
    Hive.registerAdapter(FavoriteHiveAdapter());
 
@@ -72,7 +72,7 @@ void dispose() {
         themeMode: ThemeMode.system,
         theme: Mytheme.lighttheme,
         darkTheme: Mytheme.darktheme,
-          debugShowCheckedModeBanner: false, home: SplashScreen());
+          debugShowCheckedModeBanner: false, home: SplashScreen(),);
     });
   }
 }

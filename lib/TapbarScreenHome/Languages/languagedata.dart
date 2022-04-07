@@ -1,12 +1,17 @@
+import 'dart:convert';
+import 'package:flutter/services.dart';
+import 'package:radio/Model/langcountmodal.dart';
+
+
 class LanguageData {
-  static Future<Map<String, int>>  gettotalstationlanguagewise() async{
-     final Map<String, int> list={
-       'English':5598,
-       'Deutsch':2635,
-       
-     };
-     return list;
-  }
+
+  static Future<LanginfoSet> loadJsonDataSet() async {
+      String jsonstring = await rootBundle
+          .loadString('assets/languagecount/langcount.json');
+      final jsonresponse = json.decode(jsonstring);
+      return LanginfoSet.fromJson(jsonresponse);
+  
+    }
 }
 
 

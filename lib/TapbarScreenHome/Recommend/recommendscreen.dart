@@ -45,7 +45,7 @@ class _RecommendScreenState extends State<RecommendScreen> {
                 body: Container(
                   child: Column(
                     children: [
-                      RecentPlayed(radioData: data),
+                 RecentPlayed(radioData: data),
                       Divider(
                         color: Colors.redAccent,
                         height: 20,

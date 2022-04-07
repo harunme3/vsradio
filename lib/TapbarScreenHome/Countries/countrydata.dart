@@ -1,10 +1,15 @@
-class CountryData {
-  static Future<Map<String, int>> gettotalstationcountrywise()async{
-     final Map<String, int> list={
-       'in':250,
-       'us':4707,
+import 'dart:convert';
 
-     };
-     return list;
-  }
+import 'package:flutter/services.dart';
+import 'package:radio/Model/countrycountmodal.dart';
+
+class CountryData {
+     static Future<CountryinfoSet> loadJsonDataSet() async {
+
+      String jsonstring = await rootBundle
+          .loadString('assets/countriescount/countrycount.json');
+      final jsonresponse = json.decode(jsonstring);
+      return CountryinfoSet.fromJson(jsonresponse);
+  
+    }
 }
